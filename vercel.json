@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "app.py", // Your main Flask/FastAPI file
+      "use": "@vercel/python",
+      "config": { "maxLambdaSize": "15mb" } // Adjust if needed
+    }
+  ],
+  "routes": [
+    // Reroute all requests to the Flask app
+    { "src": "/(.*)", "dest": "app.py" }
+  ],
+  "env": {
+    // You should set these in the Vercel project settings UI for security
+    // "TELEGRAM_BOT_TOKEN": "@telegram-bot-token-secret-name",
+    // "ALIEXPRESS_APPKEY": "@aliexpress-appkey-secret-name",
+    // "ALIEXPRESS_APP_SECRET": "@aliexpress-app-secret-secret-name",
+    // "ALIEXPRESS_TRACKING_ID": "@aliexpress-tracking-id-secret-name"
+  }
+}
