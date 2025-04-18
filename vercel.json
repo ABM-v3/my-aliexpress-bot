@@ -4,7 +4,7 @@
     {
       "src": "app.py", 
       "use": "@vercel/python",
-      "config": { "maxLambdaSize": "15mb" } // Adjust if needed
+      "config": { "maxLambdaSize": "15mb" } 
     }
   ],
   "routes": [
@@ -15,6 +15,6 @@
     "TELEGRAM_BOT_TOKEN": "@telegram-bot-token-secret-name",
      "ALIEXPRESS_APPKEY": "@aliexpress-appkey-secret-name",
     "ALIEXPRESS_APP_SECRET": "@aliexpress-app-secret-secret-name",
-  // "ALIEXPRESS_TRACKING_ID": "@aliexpress-tracking-id-secret-name"
+   "ALIEXPRESS_TRACKING_ID": "@aliexpress-tracking-id-secret-name"
   }
 }
